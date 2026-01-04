@@ -9,6 +9,7 @@ ROBOTS = {
     "FrankaPanda": "Franka Emika Panda (default)",
     "Fetch": "Mobile robot with one arm",
     "Tiago": "Mobile robot with two arms",
+    "R1": "Mobile robot with two arms",
 }
 TELEOP_METHOD = {
     "keyboard": "Keyboard (default)",

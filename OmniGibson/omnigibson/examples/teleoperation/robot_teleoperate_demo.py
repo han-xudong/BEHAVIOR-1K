@@ -15,6 +15,7 @@ TELEOP_METHOD = {
     "spacemouse": "SpaceMouse",
     "oculus": "Oculus Quest",
     "vision": "Human Keypoints with Camera",
+    "t265": "Intel RealSense T265",
 }
 
 
@@ -40,6 +41,7 @@ def main():
     teleop_config.base_controller = base_teleop_method
     teleop_config.interface_kwargs["keyboard"] = {"arm_speed_scaledown": 0.04}
     teleop_config.interface_kwargs["spacemouse"] = {"arm_speed_scaledown": 0.04}
+    teleop_config.interface_kwargs['t265'] = {"sn": {'right': '908412110378', 'left': None}}
     if arm_teleop_method == "vision" or base_teleop_method == "vision":
         teleop_config.interface_kwargs["vision"] = {"camera": RealSenseCamera()}
 

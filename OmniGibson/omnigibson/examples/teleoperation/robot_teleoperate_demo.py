@@ -39,7 +39,7 @@ def main():
     teleop_config.arm_left_controller = arm_teleop_method
     teleop_config.arm_right_controller = arm_teleop_method
     teleop_config.base_controller = base_teleop_method
-    teleop_config.interface_kwargs["keyboard"] = {"arm_speed_scaledown": 0.04}
+    teleop_config.interface_kwargs["keyboard"] = {"arm_speed_scaledown": 0.04, "base_speed_scaledown": 0.1}
     teleop_config.interface_kwargs["spacemouse"] = {"arm_speed_scaledown": 0.04}
     teleop_config.interface_kwargs['asmagic'] = {"host": {'left':'192.168.31.10', 'right':'192.168.31.11'}, "port": {"left": 8000, "right": 8000}}
     if arm_teleop_method == "vision" or base_teleop_method == "vision":

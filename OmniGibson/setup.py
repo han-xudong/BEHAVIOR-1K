@@ -69,7 +69,7 @@ setup(
             "mkdocs-literate-nav",
             "mkdocs-redirects",
             "mkdocs-include-markdown-plugin",
-            "telemoma~=0.3.0",
+            "telemoma @ git+https://github.com/han-xudong/telemoma@feature/asmagic",
             "gspread>=6.2.1",
         ],
         "primitives": [

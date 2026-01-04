@@ -9,6 +9,7 @@ ROBOTS = {
     "FrankaPanda": "Franka Emika Panda (default)",
     "Fetch": "Mobile robot with one arm",
     "Tiago": "Mobile robot with two arms",
+    "R1": "Mobile robot with two arms"
 }
 TELEOP_METHOD = {
     "keyboard": "Keyboard (default)",
@@ -39,7 +40,7 @@ def main():
     teleop_config.arm_left_controller = arm_teleop_method
     teleop_config.arm_right_controller = arm_teleop_method
     teleop_config.base_controller = base_teleop_method
-    teleop_config.interface_kwargs["keyboard"] = {"arm_speed_scaledown": 0.04}
+    teleop_config.interface_kwargs["keyboard"] = {"arm_speed_scaledown": 0.04, "base_speed_scaledown": 0.2}
     teleop_config.interface_kwargs["spacemouse"] = {"arm_speed_scaledown": 0.04}
     teleop_config.interface_kwargs['t265'] = {"sn": {'right': '908412110378', 'left': None}}
     if arm_teleop_method == "vision" or base_teleop_method == "vision":
